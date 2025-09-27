@@ -84,71 +84,70 @@ export default function TabsPage() {
     ));
   };
 
-  const generateHTML = () => {
-    const html = `<!DOCTYPE html>
+  // REPLACE the generateHTML function in app/tabs/page.tsx with this:
+
+const generateHTML = () => {
+  const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generated Tabs</title>
-    <style>
-        .tab-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-        .tab-header {
-            background: #f5f5f5;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .tab-button {
-            padding: 12px 20px;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .tab-button:hover {
-            background: rgba(0, 123, 255, 0.05);
-        }
-        .tab-button.active {
-            border-bottom-color: #007bff;
-            background: rgba(0, 123, 255, 0.1);
-            color: #007bff;
-        }
-        .tab-content {
-            padding: 20px;
-            min-height: 150px;
-            background: white;
-            line-height: 1.6;
-        }
-        .tab-panel {
-            display: none;
-        }
-        .tab-panel.active {
-            display: block;
-        }
-        @media (max-width: 600px) {
-            .tab-button {
-                padding: 10px 16px;
-                font-size: 13px;
+</head>
+<body>
+    <div style="width: 100%; max-width: 800px; margin: 20px auto; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; font-family: Arial, sans-serif;">
+        <div style="background: #f5f5f5; border-bottom: 1px solid #ccc; display: flex; flex-wrap: wrap;">
+${tabs.map((tab, index) => 
+  `            <button style="padding: 12px 20px; border: none; background: ${index === 0 ? 'rgba(0, 123, 255, 0.1)' : 'transparent'}; cursor: pointer; border-bottom: 3px solid ${index === 0 ? '#007bff' : 'transparent'}; transition: all 0.3s ease; font-size: 14px; font-weight: 500; color: ${index === 0 ? '#007bff' : 'inherit'};" onmouseover="this.style.background='rgba(0, 123, 255, 0.05)'" onmouseout="this.style.background='${index === 0 ? 'rgba(0, 123, 255, 0.1)' : 'transparent'}'" onclick="openTab(event, '${tab.id}')">${tab.heading}</button>`
+).join('\n')}
+        </div>
+        <div style="padding: 20px; min-height: 150px; background: white; line-height: 1.6;">
+${tabs.map((tab, index) => 
+  `            <div id="${tab.id}" style="display: ${index === 0 ? 'block' : 'none'};">${tab.content}</div>`
+).join('\n')}
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab panels
+            var allTabs = document.querySelectorAll('[id]');
+            for (i = 0; i < allTabs.length; i++) {
+                if (allTabs[i].id && allTabs[i].id !== '') {
+                    allTabs[i].style.display = 'none';
+                }
             }
-            .tab-content {
-                padding: 16px;
+            
+            // Remove active styling from all buttons
+            var buttons = evt.target.parentElement.children;
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].style.borderBottomColor = 'transparent';
+                buttons[i].style.backgroundColor = 'transparent';
+                buttons[i].style.color = 'inherit';
+            }
+            
+            // Show selected tab and style active button
+            document.getElementById(tabId).style.display = 'block';
+            evt.target.style.borderBottomColor = '#007bff';
+            evt.target.style.backgroundColor = 'rgba(0, 123, 255, 0.1)';
+            evt.target.style.color = '#007bff';
+        }
+    </script>
+
+    <style>
+        @media (max-width: 600px) {
+            div[style*="padding: 12px 20px"] {
+                padding: 10px 16px !important;
+                font-size: 13px !important;
+            }
+            div[style*="padding: 20px"] {
+                padding: 16px !important;
             }
         }
     </style>
-</head>
-<body>
+</body>
     <div class="tab-container">
         <div class="tab-header">
 ${tabs.map((tab, index) => `            <button class="tab-button${index === 0 ? ' active' : ''}" onclick="openTab(event, '${tab.id}')">${tab.heading}</button>`).join('\n')}
