@@ -78,7 +78,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav style={{ display: window.innerWidth >= 768 ? 'block' : 'none' }}>
+          <nav className="hidden md:block">
             <div style={{ display: 'flex', gap: '2rem' }}>
               {navigation.map((item) => (
                 <Link
@@ -132,7 +132,7 @@ export default function Header() {
               )}
             </button>
 
-            {/* Hamburger Menu Button - FIXED */}
+            {/* Hamburger Menu Button */}
             <button
               onClick={toggleMenu}
               style={{
@@ -175,7 +175,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu - FIXED */}
+      {/* Mobile Navigation Menu */}
       <div style={{
         display: isMenuOpen ? 'block' : 'none',
         backgroundColor: theme === 'dark' ? '#111827' : '#ffffff',

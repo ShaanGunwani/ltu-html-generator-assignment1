@@ -12,7 +12,7 @@ export default function CourtRoom() {
             Court Room
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-            This page is currently under development and will be completed in future assignments.
+            This page is currently under development.
           </p>
           <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">

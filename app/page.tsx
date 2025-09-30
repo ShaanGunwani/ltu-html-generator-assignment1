@@ -4,7 +4,7 @@ export default function Home() {
   const features = [
     {
       title: 'HTML5 Tabs Generator',
-      description: 'Create interactive tabs with customizable headings and content. Generate clean HTML5 code with inline CSS.',
+      description: 'Create the interactive tabs with the customizable headings and content. Generate the clean HTML5 code with the inline CSS.',
       href: '/tabs',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       title: 'Dark/Light Themes',
-      description: 'Switch between light, dark, and automatic themes. Your preference is saved and synchronized across sessions.',
+      description: 'Switch between the light, dark, and automatic themes. Your preference is saved and synchronized across the sessions.',
       href: '#themes',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ export default function Home() {
     },
     {
       title: 'Responsive Design',
-      description: 'Fully responsive interface with hamburger menu for mobile devices. Accessible and user-friendly across all screen sizes.',
+      description: 'Fully responsive interface with hamburger menu for the mobile devices. Accessible and user-friendly across all the screen sizes.',
       href: '#responsive',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       title: 'Clean Code Output',
-      description: 'Generate production-ready HTML5 code with inline CSS. No external dependencies or CSS classes required.',
+      description: 'Generate the HTML5 code with the inline CSS. No external dependencies or CSS classes is needed.',
       href: '/tabs',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,15 +54,15 @@ export default function Home() {
               LTU HTML Generator
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Create beautiful HTML5 components with inline CSS for MOODLE LMS deployment. 
-              Generate tabs, carousels, modals, and more with our intuitive interface.
+              Make beautiful HTML5 components with the inline CSS for the MOODLE LMS deployment. 
+              Give the tabs, carousels, modals, and more with our interface.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/tabs"
                 className="btn-primary inline-flex items-center justify-center"
               >
-                Start Creating Tabs
+                Start Making the Tabs
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -86,7 +86,7 @@ export default function Home() {
               Powerful Features
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Everything you need to create professional HTML5 components for educational content
+              Everything you need to make an HTML5 components for the educational use
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
               How It Works
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Create professional HTML5 components in three simple steps
+              Create a professional HTML5 components in three simple steps
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function Home() {
                 Configure
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Use our intuitive interface to add tabs, set headings, and customize content
+                Use our intuitive interface to add the tabs, set the headings, and customize the content
               </p>
             </div>
             
@@ -149,7 +149,7 @@ export default function Home() {
                 Generate
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Click the output button to generate clean HTML5 code with inline CSS
+                Click the output button to produce the clean HTML5 code with the inline CSS
               </p>
             </div>
             
@@ -161,7 +161,7 @@ export default function Home() {
                 Deploy
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Copy and paste the generated code directly into MOODLE LMS
+                Copy and paste the code directly into the MOODLE LMS
               </p>
             </div>
           </div>
@@ -175,13 +175,13 @@ export default function Home() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Create your first HTML5 component in minutes
+            Make your first HTML5 component in minutes
           </p>
           <Link 
             href="/tabs"
             className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200"
           >
-            Create Tabs Now
+            Make the Tabs Now
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

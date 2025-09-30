@@ -28,7 +28,7 @@ export default function Footer() {
         
         <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
           <div className="text-xs text-gray-500 dark:text-gray-500 text-center">
-            Built with Next.js for CSE3CWA/CSE5006 | La Trobe University
+            Built with Next.js for CSE3CWA | La Trobe University
           </div>
         </div>
       </div>
